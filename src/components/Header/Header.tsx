@@ -1,18 +1,20 @@
 import React from "react";
-import classes from "./NavBar.module.scss";
-import classNames from "classnames";
+import classes from "./header.module.scss";
+import Logo from "../../assets/SVGs/logo.svg?react";
+import SearchBox from "./SearchBox";
 
-const NavBar: React.FC = () => {
+const Header: React.FC = () => {
   return (
-    <div className={classes.navbarContainer}>
-      <header className={classNames(classes.navbar, classes.b)}>
-        <div className={classes.navItem}>About</div>
-        <div className={classes.navItem}>Experience</div>
-        <div className={classes.navItem}>Projects</div>
-        <div className={classes.navItem}>Contact</div>
-      </header>
-    </div>
+    <header className={classes.header}>
+      <div className={classes.headerLeft}>
+        <div className={classes.logoContainer}>
+          <Logo />
+        </div>
+      </div>
+      <SearchBox />
+      <div className={classes.headerRight}></div>
+    </header>
   );
 };
 
-export default NavBar;
+export default Header;

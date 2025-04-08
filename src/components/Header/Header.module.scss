@@ -1,43 +1,24 @@
-.headerContainer {
-  height: 10rem;
+.header {
+  height: 3.75rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: transparent;
-  .header {
+  background-color: #131921;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 1.5rem;
+  .headerLeft {
+    width: 25%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    border-radius: 1.5rem;
-    background-color: rgb(55, 55, 55);
-    gap: 2rem;
-    --border-angle: 0deg;
-    animation: border-angle-rotate 3s infinite linear;
-    border: 1px solid transparent;
-    position: relative;
-
-    &.b {
-      --bg: hsl(190deg 20% 10%);
-      background: linear-gradient(rgb(55, 55, 55), rgb(55, 55, 55)) padding-box,
-        conic-gradient(from var(--border-angle), var(--bg) 20%, #ac04fb)
-          border-box;
+    align-items: center;
+    .logoContainer {
+      height: 2.5rem;
     }
-
-    @keyframes border-angle-rotate {
-      0% {
-        --border-angle: 0deg;
-      }
-      100% {
-        --border-angle: 360deg;
-      }
-    }
-
-    .navItem {
-      font-family: "Playfair Display", serif;
-      font-size: 1.125rem;
-      font-weight: 400;
-      line-height: 1.5rem;
-      color: white;
-      padding: 1.125rem 2rem;
-    }
+  }
+  .headerRight {
+    width: 25%;
+    height: 100%;
   }
 }
